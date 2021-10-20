@@ -9,9 +9,9 @@ Express, jest, dotenv, supertest, nodemon
 Testing /person route
 
 ## Links to application deployment
-talk: https://anthonymort-server-deploy-prod.herokuapp.com/person
-pull request: https://github.com/anthonylouismorton/server-deployment-practice/pull/1
-actions: https://github.com/anthonylouismorton/server-deployment-practice/actions
+person: https://anthonymo-basic-express-server.herokuapp.com/person
+pull request: https://github.com/anthonylouismorton/basic-express-server/pull/1
+actions: https://github.com/anthonylouismorton/basic-express-server/actions
 
 ## Include embedded UML
 ![uml](./basicserver.png)
