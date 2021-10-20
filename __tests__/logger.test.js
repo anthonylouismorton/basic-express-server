@@ -1,16 +1,22 @@
-// 'use strict'
+'use strict'
 
-// const logger = require('../src/middleware/logger.js');
+const logger = require('../src/middleware/logger.js');
 
 
-// describe('Testing logger to determine if it is logging requests', () =>{
-//   let req ={method: 'GET', query: {}};
-//   let res = {status: null};
-//   let next = jest.fn();
-//   it('Should be able to log any methods', async () => {
-//     req.query.name = undefined;
-//     logger(req, res, next);
-//     expect(console.log).toHaveBeenCalledWith('GET');
-//     expect(next).toHaveBeenCalled();
-//   })
-// })
+describe('Testing the logging middleware', () => {
+
+  let req = {method: 'GET'};
+  let res = {};
+  let next = jest.fn(); // a jest "spy"
+  console.log = jest.fn();
+
+  it('should be able to log a method', () => {
+
+    // actually use our logger
+    logger(req, res, next);
+
+    expect(console.log).toHaveBeenCalledWith('GET');
+    expect(next).toHaveBeenCalled();
+    // expect(next).toHaveBeenCalledWith('Error text');
+  });
+});

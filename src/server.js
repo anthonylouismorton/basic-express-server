@@ -17,9 +17,8 @@ function handlePerson(request, response){
   response.send(name);
 }
 
-app.use(error500);
 app.use('*',error404);
-
+app.use(error500);
 
 module.exports = {
   app,

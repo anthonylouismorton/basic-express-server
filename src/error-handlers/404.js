@@ -1,7 +1,6 @@
 'use strict'
 
-module.exports = function (err, request, response, next) {
-  console.log(err)
+module.exports = function (request, response, next) {
   response.status(404)
   response.end();
   
